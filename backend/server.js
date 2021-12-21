@@ -13,8 +13,12 @@ const cartRoutes = require('./routes/cart.routes');
 const offerRoutes = require('./routes/offers.routes');
 const verifRoutes = require('./routes/verif.routes');
 const contactRoutes = require('./routes/contact.routes');
+const path = require("path");
 
 const app = express()
+
+app.use(express.static(path.resolve(__dirname, "./frontend/build")));
+
 app.use(flash());
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon app",
     "test": "jest --forceExit",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
